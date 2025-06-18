@@ -1,0 +1,15 @@
+@layer base {
+  span:has(> svg:only-child) {
+    @apply inline-flex shrink-0;
+
+    & > svg {
+      @apply mx-auto h-full w-auto max-w-full fill-current;
+    }
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

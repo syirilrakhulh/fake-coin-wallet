@@ -1,0 +1,17 @@
+@utility content-empty {
+  content: '';
+}
+
+@utility content-colon {
+  content: ':';
+}
+
+@utility glass-* {
+  @apply backdrop-blur-glass shadow-glass border;
+  border-color: --alpha(--value(--color- *) / 10%);
+  background-color: --alpha(--value(--color- *) / 5%);
+}
+
+@utility underline-animation {
+  @apply before:content-empty relative before:absolute before:bottom-0 before:left-0 before:h-[1.2px] before:w-0 before:bg-current before:opacity-50 before:transition-all before:duration-500 before:ease-in-out not-hover:before:right-auto not-hover:before:left-0 not-hover:before:w-0 hover:before:right-0 hover:before:left-auto hover:before:w-full;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@fake-coin/server",
+  "description": "Fake Coin server app",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check-types": "vue-tsc --noEmit",
+    "deploy": "wrangler deploy --minify --env production",
+    "dev": "wrangler dev --env development",
+    "init-db:development": "dotenvx run --quiet -f ./.dev.vars.development -- node ./script/init-db.js",
+    "init-db:production": "dotenvx run --quiet -f ./.dev.vars.production -- node ./script/init-db.js",
+    "serve": "wrangler dev --env production"
+  },
+  "dependencies": {
+    "@fake-coin/wallet": "*",
+    "@neondatabase/serverless": "^1.0.1",
+    "ethereum-cryptography": "^3.2.0",
+    "hono": "^4.7.11",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.44.2",
+    "wrangler": "^4.20.0"
+  }
+}

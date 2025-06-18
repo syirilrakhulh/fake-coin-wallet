@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@import './_base.css';
+@import './_fonts.css';
+@import './_keyframes.css';
+@import './_utilities.css';
+@import './_variables.css';
+
+body {
+  @apply bg-background text-text/50 font-inter text-body-sm relative min-h-dvh;
+
+  #app > .layout {
+    @apply size-full p-8;
+  }
+}

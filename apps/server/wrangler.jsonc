@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fake-coin-wallet",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-06-04",
+  "compatibility_flags": ["nodejs_compat", "nodejs_compat_populate_process_env"],
+  "env": {
+    "development": {},
+    "production": {},
+  },
+  "dev": {
+    "port": 3000,
+  },
+}

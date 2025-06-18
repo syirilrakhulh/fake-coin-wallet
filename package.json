@@ -1,0 +1,57 @@
+{
+  "name": "fake-coin",
+  "description": "Simple exchange apps with Secp256k1 to simulate non-custodial wallet on cryptocurrency",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "client:build": "turbo run build --filter=@fake-coin/client",
+    "client:check-types": "turbo run check-types --filter=@fake-coin/client",
+    "client:deploy": "turbo run deploy --filter=@fake-coin/client",
+    "client:dev": "turbo run dev --filter=@fake-coin/client",
+    "client:serve": "turbo run serve --filter=@fake-coin/client",
+    "deploy": "turbo run deploy",
+    "dev": "turbo run dev",
+    "eslint:check": "eslint --cache",
+    "eslint:fix": "bun run eslint:check -- --fix",
+    "format": "bun run prettier:fix",
+    "lint": "bun run eslint:check",
+    "prettier:check": "prettier . --check --cache",
+    "prettier:fix": "bun run prettier:check -- --write",
+    "serve": "turbo run serve",
+    "server:check-types": "turbo run check-types --filter=@fake-coin/server",
+    "server:deploy": "turbo run deploy --filter=@fake-coin/server",
+    "server:dev": "turbo run dev --filter=@fake-coin/server",
+    "server:init:development": "bun --filter=@fake-coin/server run init-db:development",
+    "server:init:production": "bun --filter=@fake-coin/server run init-db:production",
+    "server:serve": "turbo run serve --filter=@fake-coin/server",
+    "wallet:build": "turbo run build --filter=@fake-coin/wallet",
+    "wallet:check-types": "turbo run check-types --filter=@fake-coin/wallet"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.9",
+    "@eslint/js": "^9.28.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^24.0.0",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-vue": "^10.2.0",
+    "globals": "^16.2.0",
+    "jiti": "^2.4.2",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.12",
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.2.4",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

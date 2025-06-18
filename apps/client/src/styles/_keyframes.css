@@ -1,0 +1,97 @@
+@theme {
+  @keyframes grain {
+    0% {
+      transform: translate3d(0, 9rem, 0);
+    }
+    10% {
+      transform: translate3d(-1rem, -4rem, 0);
+    }
+    20% {
+      transform: translate3d(-8rem, 2rem, 0);
+    }
+    30% {
+      transform: translate3d(9rem, -9rem, 0);
+    }
+    40% {
+      transform: translate3d(-2rem, 7rem, 0);
+    }
+    50% {
+      transform: translate3d(-9rem, -4rem, 0);
+    }
+    60% {
+      transform: translate3d(2rem, 6rem, 0);
+    }
+    70% {
+      transform: translate3d(7rem, -8rem, 0);
+    }
+    80% {
+      transform: translate3d(-9rem, 1rem, 0);
+    }
+    90% {
+      transform: translate3d(6rem, -5rem, 0);
+    }
+    100% {
+      transform: translate3d(-7rem, 0, 0);
+    }
+  }
+
+  @keyframes float-1 {
+    0% {
+      opacity: 0.2;
+      transform: translate3d(2%, -2%, 0);
+    }
+    50% {
+      opacity: 0.3;
+      transform: translate3d(-2%, 2%, 0);
+    }
+    100% {
+      opacity: 0.2;
+      transform: translate3d(2%, -2%, 0);
+    }
+  }
+
+  @keyframes float-2 {
+    0% {
+      opacity: 0.3;
+      transform: rotate(2deg) translate3d(0, 2%, 0);
+    }
+    50% {
+      opacity: 0.4;
+      transform: rotate(6deg) translate3d(0, -2%, 0);
+    }
+    100% {
+      opacity: 0.3;
+      transform: rotate(2deg) translate3d(0, 2%, 0);
+    }
+  }
+
+  @keyframes float-3 {
+    0% {
+      opacity: 0.3;
+      transform: rotate(-5deg) translate3d(-5%, 2%, 0);
+    }
+    50% {
+      opacity: 0.2;
+      transform: rotate(5deg) translate3d(5%, -2%, 0);
+    }
+    100% {
+      opacity: 0.3;
+      transform: rotate(-5deg) translate3d(-5%, 2%, 0);
+    }
+  }
+
+  @keyframes float-4 {
+    0% {
+      opacity: 0.2;
+      transform: translate3d(100%, -40%, 0) rotate(0deg);
+    }
+    50% {
+      opacity: 0.3;
+      transform: translate3d(50%, -20%, 0) rotate(240deg);
+    }
+    100% {
+      opacity: 0.2;
+      transform: translate3d(100%, -40%, 0) rotate(0);
+    }
+  }
+}

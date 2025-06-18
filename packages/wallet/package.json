@@ -1,0 +1,22 @@
+{
+  "name": "@fake-coin/wallet",
+  "description": "Wallet utilities for Fake Coin",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && tsc --emitDeclarationOnly && tsup",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "terser": "^5.42.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "ethereum-cryptography": "^3.2.0"
+  }
+}

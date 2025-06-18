@@ -1,0 +1,33 @@
+{
+  "name": "@fake-coin/client",
+  "description": "Fake Coin client app",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun run check-types && vite build",
+    "check-types": "vue-tsc --noEmit",
+    "deploy": "",
+    "dev": "vite",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@fake-coin/wallet": "*",
+    "@tailwindcss/vite": "^4.1.8",
+    "date-fns": "^4.1.0",
+    "ethereum-cryptography": "^3.2.0",
+    "pinia": "^3.0.3",
+    "tailwindcss": "^4.1.8",
+    "vue": "^3.5.16",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-vue-devtools": "^7.7.6",
+    "vite-svg-loader": "^5.1.0",
+    "vue-tsc": "^2.2.10"
+  }
+}
