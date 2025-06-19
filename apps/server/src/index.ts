@@ -7,9 +7,15 @@ import { validatePayload } from './middlewares';
 import { transferSchema, walletSignatureSchema } from './schemas';
 import { Env } from './types';
 
-const app = new Hono();
+const app = new Hono<Env>();
 
-app.use('/*', cors({ origin: process.env.WEB_URL, allowMethods: ['GET', 'POST'] }));
+app.use(
+  '/*',
+  cors({
+    origin: (_, c) => c.env.WEB_URL,
+    allowMethods: ['GET', 'POST'],
+  }),
+);
 
 app.get('/', (c) => c.text('Fake Coin is live!'));
 
